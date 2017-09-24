@@ -7,6 +7,10 @@ import java.util.Queue;
 
 public class LevelOrderTraversal {
 
+    /*
+    Use a Queue, enqueue root.
+    Dequeue, print it; and add its children to the end of queue.
+     */
     public void levelOrder(Node root) {
         Queue queue = new LinkedList<Node>();
         queue.add(root);

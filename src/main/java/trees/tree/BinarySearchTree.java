@@ -2,6 +2,10 @@ package trees.tree;
 
 public class BinarySearchTree {
 
+    /*
+    Add a pointing node to root, and move it until its null.
+    If it's right or left connection is null, then you insert the new node there.
+     */
     public void insert(int value, Node root) {
         if (root == null) {
             root = new Node(value);

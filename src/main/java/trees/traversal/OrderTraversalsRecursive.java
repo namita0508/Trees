@@ -24,7 +24,7 @@ public class OrderTraversalsRecursive {
     }
 
     //root left right: 50, 40, 30, 45, 60, 55, 70
-    //USES: To create tree replica of tree from an array.
+    //USES: To create tree replica of tree from an array, top down
     public void preOrderTraversal(Node root) {
         if (root == null)
             return;
@@ -35,7 +35,7 @@ public class OrderTraversalsRecursive {
     }
 
     //left right root: 30, 45, 40, 55, 70, 60, 50
-    //USES: Delete a tree from leaf to root
+    //USES: Delete a tree from leaf to root, bottom up
     public void postOrderTraversal(Node root) {
         if (root == null)
             return;

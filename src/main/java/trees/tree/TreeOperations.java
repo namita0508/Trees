@@ -2,6 +2,10 @@ package trees.tree;
 
 public class TreeOperations {
 
+    /*
+   Add a pointing node to root, and move it until its null.
+   If it's right or left connection is null, then you insert the new node there.
+    */
     public Node insert(Node root, int value) {
         if(root == null)
             return new Node(value);
@@ -26,6 +30,12 @@ public class TreeOperations {
         return root;
     }
 
+    /*
+    Deleting leaf: simple. Mark parent's connection as null.
+    If non-leaf deletion: replace by left side's Max or right side's Min
+
+    Make it recursive: Delete method returns Root so each subtree can call delete recursively
+     */
     public Node delete(Node root, int value) {
         if (root == null) return null;
 
@@ -65,18 +75,4 @@ public class TreeOperations {
         return temp;
     }
 
-    protected Node find(Node root, int value) {
-        Node current = root;
-
-        while (current != null) {
-            if (current.value == value)
-                return current;
-            else if (value > current.value) {
-                current = current.right;
-            } else {
-                current = current.left;
-            }
-        }
-        return null;
-    }
 }
