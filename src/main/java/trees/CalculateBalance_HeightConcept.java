@@ -4,6 +4,7 @@ import trees.tree.Node;
 
 public class CalculateBalance_HeightConcept {
 
+    //Add 1 for moving each level down
     public int getHeight(Node root) {
         if (root == null)
             return 0;
@@ -33,6 +34,8 @@ public class CalculateBalance_HeightConcept {
             return false;
         isBalancedBruteForce(root.right);
 
+
+        return false;
     }
 
 

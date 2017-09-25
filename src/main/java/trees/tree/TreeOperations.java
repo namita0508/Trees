@@ -31,8 +31,12 @@ public class TreeOperations {
     }
 
     /*
-    Deleting leaf: simple. Mark parent's connection as null.
-    If non-leaf deletion: replace by left side's Max or right side's Min
+    Deleting leaf: simple. Mark as null.
+    If non-leaf deletion:
+      only right side: replace with right child
+      only left side: replace with left child
+      both sides:  replace value with left side's Max or right side's Min
+                   and delete the leftMax or rightMin
 
     Make it recursive: Delete method returns Root so each subtree can call delete recursively
      */
@@ -55,7 +59,7 @@ public class TreeOperations {
             } else {
                 //both children exist
                 Node leftMax = findLeftMax(root);
-                root = leftMax;
+                root.value = leftMax.value;
                 root.left = delete(root.left, leftMax.value);
             }
         }
