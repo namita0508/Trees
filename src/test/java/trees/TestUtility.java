@@ -12,6 +12,8 @@ public class TestUtility {
                  /\    / \
                30 45  55 70
 
+Sorted order - 30 40 45 50 55 55 60 70
+To create above tree: picking order - 50, 40, 60, 30, 45, 55, 70 i.e. middle of each part examined
      */
 
     public Node buildTree() {
