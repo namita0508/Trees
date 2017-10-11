@@ -1,0 +1,26 @@
+IMP POINTS or PROPERTIES
+
+*BST search - log n base 2
+
+* When a tree is put level by level in an array. The children of a parent at n are at (2n+1) and (2n+2) considerin array
+index starting from 0.
+
+* Number of nodes in EACH level = 2 power (level - 1)
+    ** 2 pow(0), 2 pow(1), 2 pow(2), 2 pow(3)...
+    ** Total number of nodes = sum of GP = a(r pow(n) - 1) / r - 1 , where a = 1, r = 2, n = level starting from 0
+       Total no. of nodes = 2 pow(n) - 1, where n = number of levels starting from 1
+       ==> Levels = log base 2 (n +1), where n = total no. of nodes
+
+
+* WHY BST SEARCH IS LOG N
+ **In BST search worst case you travel from root to leaf, i.e. traversing through number of nodes equal to height of tree
+   = log n base 2
+
+                        50    ---- 2 pow 0
+                       /  \
+                     40   60   ---- 2 pow 1
+                    /\    / \
+                  30 45  55 70  ---- 2 pow 2
+
+    ** actually, its log (n + 1)
+
